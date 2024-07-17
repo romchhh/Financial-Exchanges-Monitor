@@ -1,4 +1,4 @@
-token = '7361688872:AAHXRNZWAFb1ZjwKqEj2gPyz_-hQ-Jt9Kmw'
+token = 'YOUR_BOT_TOKEN'
 urls = {
     "Dexscreener": "https://dexscreener.com/",
     "Pinksale": "https://www.pinksale.finance/",
@@ -9,4 +9,4 @@ urls = {
 
 administrators = [123]
 
-logs = -4203340623
+logs = YOUR_LOGS_CHAT
