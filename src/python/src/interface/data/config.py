@@ -9,4 +9,8 @@ urls = {
 
 administrators = [123]
 
+EXPORT_PATH = r'C:\Projects\TeleBots\pinksale-launchpad-tracker-main\src\storage\export'
+
+# EXPORT_PATH = 'src/storage/export'
+
 logs = -4203340623

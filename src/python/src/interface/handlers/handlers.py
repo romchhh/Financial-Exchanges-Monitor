@@ -3,6 +3,7 @@ from interface.data.config import logs
 from interface.filters.filter import *
 from interface.functions.shedule_scrapping import send_report
 from interface.keyboards.keyboards import get_start_keyboard
+from interface.functions.clean import clean_history
 
 import os
 from aiogram import types
@@ -21,6 +22,7 @@ scheduler = AsyncIOScheduler(timezone='Europe/Kyiv')
 async def scheduler_jobs():
     scheduler.add_job(send_report, 'cron', hour=0, minute=0)
     scheduler.add_job(send_report, 'cron', hour=22, minute=55)
+    scheduler.add_job(clean_history, 'cron', hour=2, minute=55)
     scheduler.start()
     
 async def antiflood(*args, **kwargs):

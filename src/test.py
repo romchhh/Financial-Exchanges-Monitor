@@ -1,14 +1,8 @@
-import cloudscraper
+import os
 
-scraper = cloudscraper.create_scraper()
-url = "https://dexscreener.com/?rankBy=volume&order=desc&maxAge=24"
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.134 Safari/537.36",
-    "Accept-Language": "en-US,en;q=0.9",
-    "Referer": "https://dexscreener.com/",
-}
+project_directory = os.path.dirname(os.path.abspath(__file__))
 
-response = scraper.get(url, headers=headers)
+# Build the export path relative to the project directory
+export_path = os.path.join(project_directory, 'src', 'storage', 'export')
 
-print(response.status_code)
-print(response.text[:100000])  
+print(export_path)

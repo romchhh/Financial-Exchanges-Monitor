@@ -9,10 +9,8 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from interface.data.config import token, logs
 from interface.callbacks.callbacks import register_callbacks
 
-# Logging configuration
 logging.basicConfig(level=logging.INFO)
 
-# Bot and Dispatcher setup
 bot = Bot(token=token, parse_mode='HTML')
 storage = MemoryStorage()
 dp = Dispatcher(bot, storage=storage)
